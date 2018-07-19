@@ -45,3 +45,18 @@ np.ones((2,3), dtype=float)# fills with ones, np.zeros(7,dtype=int), fills with 
 #np.zeros_like(a) #creates array with same dimensions as 'a', also works for ones_like
 np.identity(4,dtype=float) # creates identity matrix of row and column size 4
 np.eye(4, k =1 , dtype=float )# returns array with 1s along kth diagonal
+
+# array operations +,-,*,/,%,** are done elementwise, arrays should be same size.
+#even for 2D arrays, multiplication is elementwise
+#if arrays arent the same size then the smaller one is broadcasted across the larger
+a = np.array([[1, 2], [3, 4], [5, 6]], float)
+b = np.array([-1, 3], float)
+print(a+b)
+np.floor(a)#lower int
+np.ceil(a)#upper int
+np.rint(a)#nearest rounded int
+np.pi
+np.e
+
+for x in b:
+    print(x)
