@@ -58,5 +58,53 @@ np.rint(a)#nearest rounded int
 np.pi
 np.e
 
-for x in b:
+for x in b: # array iteration
     print(x)
+
+for x in a:# iteration over 2D Array goes first axis, then next next next
+    print(x)
+
+for (x,y) in a:#multiple assignment
+    print x*y
+
+b.sum() # returns sum of all elements
+np.sum(b)
+b.prod() # returns product of all elements
+np.prod(b)
+b.mean()# avg of all elements
+b.var()#variance
+b.std()#std dev
+a.min()# min element value
+a.max()#max element value
+a.argmin()#returns INDEX of min value
+a.argmax()#returns INDEX of max value
+#for 2D arrays, each of the above can take additional (axis=x) argument to choose form an axis
+# for ex: a.mean(axis=0)
+
+sorted(a)#sorts array, simple
+a.sort(a)
+
+a.clip(0,5)# can clip all values to be within those two values
+np.unique(a)# unique elements can be extracted from array
+a.diagonal()#returns diagonal if 2D array
+
+# a > b returns a boolean array that compares a and b values elementwise
+# any(c) returns if there are any true elements in Boolean array
+#all(c) returns if there ALL elements are true in boolean array
+
+#np.logical_and(a>0,a<3) returns boolean array with constraints
+#np.where idk what this does but where(boolarray,truearray,falsearray)
+a.nonzero()# gives tuple of indices of the nonzero values in array
+np.isnan(a)
+# array selectors to filter subests of elements of other array a for value in variable
+a = np.array([[6, 4], [5, 9]], float)
+a[a>=6]# returns array [6,9]
+a[np.logical_and(a > 5, a < 9)]#returns 6
+a = np.array([2, 4, 6, 8], float)
+b = np.array([0, 0, 1, 3, 2, 1], int)
+#a[b] ->array([ 2., 2., 4., 8., 6., 4.])
+np.dot(a,b)#gives dot product of two arrays, also generalized to matrix multiplication
+
+np.random.seed(293423)
+np.random.rand(5)
+np.nandom.rand(2,3)
